@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(./public/assets/home/background-home-desktop.jpg);
+  transition: 300ms background-image;
+  will-change: background-image;
+  background-size: cover;
+  background-position: center;
+  @apply text-alt;
+  overflow: overlay;
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  @apply w-[14px] h-[14px] rounded-[100px] bg-transparent;
+}
+::-webkit-scrollbar:hover {
+  @apply bg-black bg-opacity-30;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.75);
+  @apply rounded-[100px] bg-black bg-opacity-75;
+  background-clip: padding-box;
+  backdrop-filter: blur(4px);
+  border: 3px solid transparent;
+}
+::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 0, 0, 1);
+  background-clip: padding-box;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: rgba(255, 255, 255, 0.1);
+}
+::selection {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 0px 2px white;
+}
+
+.crew-content {
+  height: calc(100vh - 8.5rem);
+}
